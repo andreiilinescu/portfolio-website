@@ -2,8 +2,8 @@ import Footer from './Footer';
 
 export default function Hero(){
     return (
-        <section className="flex relative flex-col  px-4 sm:px-6 lg:px-10 py-6 lg:py-12">
-            <div className="relative max-w-4xl z-10 flex flex-col justify-center">
+        <section className="flex relative flex-col  px-4 sm:px-6 lg:px-10 py-6 lg:py-12 max-w-4xl">
+            <div className="relative  z-10 flex flex-col justify-center">
                 {/* Hidden on mobile, visible from sm breakpoint */}
                 <h1 className="hidden sm:block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter mb-4 text-foreground">
                     I turn research into systems that work.
