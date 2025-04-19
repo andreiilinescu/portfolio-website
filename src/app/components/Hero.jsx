@@ -1,12 +1,8 @@
-import ShaderSphere from './ShaderSphere';
 import Footer from './Footer';
 
 export default function Hero(){
     return (
-        <section className="flex relative flex-col min-h-screen px-4 sm:px-6 lg:px-10 py-6 lg:py-12">
-            <div className="absolute top-0 left-0 w-screen h-screen">
-                <ShaderSphere />
-            </div>
+        <section className="flex relative flex-col  px-4 sm:px-6 lg:px-10 py-6 lg:py-12">
             <div className="relative max-w-4xl z-10 flex flex-col justify-center">
                 {/* Hidden on mobile, visible from sm breakpoint */}
                 <h1 className="hidden sm:block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter mb-4 text-foreground">
