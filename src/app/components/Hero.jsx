@@ -14,13 +14,13 @@ export default function Hero(){
               <h1 className="text-xl sm:text-xl md:text-3xl font-bold font-serif text-[var(--foreground)] leading-tight">
                 I'm Andrei Ilinescu
               </h1>
-              <ul className="text-muted text-base sm:text-lg space-y-2 mt-3">
+              <ul className="text-muted text-base sm:text-md md:text-lg space-y-2 mt-3">
                 <li>🎓 cs @ TU Delft (math minor -quant finance@ PoliMi - fall 2025)</li>
                 <li>⚛️ honours student researcher @ InfiniData Lab - optimizing quantum simulations</li>
                 <li>🛠️ r&d intern @ Ampelmann - real-time logging systems & HMI software</li>
               </ul>
 
-              <div className="text-muted text-base sm:text-lg mt-6 space-y-1">
+              <div className="text-muted text-base sm:text-md  md:text-lg mt-6 space-y-1">
                 <p className="text-[var(--foreground)] font-semibold">recently:</p>
                 <ul className="list-none pl-0 space-y-1">
                   <li>↳ built a circuit simulator faster than QimB (50%+ on sparse circuits)</li>
