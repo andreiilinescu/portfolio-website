@@ -19,7 +19,7 @@ export default function Header() {
                     </div>
                                         
                     {/* Navigation */}
-                    <nav className="flex items-center space-x-12 backdrop-blur-md md:px-8 md:py-3  sm:px-4 sm:py-1 rounded-full border"
+                    <nav className="flex items-center space-x-12 backdrop-blur-md px-8 py-3 rounded-full border"
                          style={{
                              backgroundColor: 'var(--nav-bg)',
                              borderColor: 'var(--border-color)'
