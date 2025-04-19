@@ -5,11 +5,12 @@ import About from './components/About';
 export default function HomePage() {
   return (
     <div className="relative">
-      <Header />
-      <main className="relative">
+      <div >
+        <Header />
         <Hero />
-        <Work />
-      </main>
+      </div>
+      <div className="gradient-transition"></div>
+
     </div>
   );
 

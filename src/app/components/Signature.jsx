@@ -47,7 +47,7 @@ export default function Signature() {
           ))}
         </g>
       </motion.svg>
-      {/* <motion.button
+      <motion.button
         onClick={() => setKey(k => k + 1)}
         className="text-stone-400 hover:text-stone-600 dark:hover:text-stone-300 transition-colors"
         initial={{ opacity: 0 }}
@@ -55,7 +55,7 @@ export default function Signature() {
         transition={{ duration: 1, delay: 5 }}
       >
         <RotateCcw size={16} />
-      </motion.button> */}
+      </motion.button>
     </div>
   )
 }

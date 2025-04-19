@@ -2,6 +2,7 @@
 
 :root {
   --transition-default: background-color 0.3s ease, color 0.3s ease;
+  --sphere-colour: #8b87c4;
 }
 [data-theme='light'] {
   --background: #fdfdff;
@@ -12,8 +13,8 @@
   --gradient-color-2: #6ec3f4;
   --gradient-color-3: #eae2ff;
   --gradient-color-4: #b9beff;
-  --nav-bg: rgba(255, 255, 255, 0.05);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.2);
   --theme-filter: none;
   --text-color: rgba(0, 0, 0, 0.8);
 }
@@ -27,7 +28,7 @@
   --gradient-color-2: #203a43;
   --gradient-color-3: #2c5364;
   --gradient-color-4: #192841;
-  --nav-bg: rgba(0, 0, 0, 0.05);
+  --nav-bg: rgba(0, 0, 0, 0.1);
   --border-color: rgba(128, 128, 128, 0.5);
   --theme-filter: invert(1);
   --text-color: rgba(255, 255, 255, 0.8);
