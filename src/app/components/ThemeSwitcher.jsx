@@ -45,7 +45,7 @@ export default function ThemeSwitcher() {
       aria-label="Toggle theme"
       className="p-2 text-2xl focus:outline-none"
     >
-      {theme === 'light' ? <Sun className="h-4 w-4" style={{color: 'var(--text-color)'}}/> : <Moon className="h-4 w-4 " style={{color: 'var(--text-color)'}} />}
+      {theme === 'light' ? <Sun className="h-4 w-4 " style={{color: 'var(--text-color)' , cursor:'pointer'}}/> : <Moon className="h-4 w-4 " style={{color: 'var(--text-color)', cursor:'pointer'}} />}
     </button>
   );
 }

@@ -1,16 +1,12 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Work from './components/Work';
-import About from './components/About';
 export default function HomePage() {
   return (
     <div className="relative">
-      <div >
-        <Header />
+        <div className='max-w-4xl fixed top-0 left-0 w-full z-50'>
+          <Header />
+        </div>
         <Hero />
-      </div>
-      <div className="gradient-transition"></div>
-
     </div>
   );
 
