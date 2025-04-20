@@ -2,12 +2,13 @@
 
 :root {
   --transition-default: background-color 0.3s ease, color 0.3s ease;
+  background-color: black;
 }
 [data-theme='light'] {
-  --background: #fdfdff;
+  --background: #ffffff;
   --foreground: #111111;
-  --accent: #040506; 
-  --muted: #5e6065;  
+  --accent: #010101; 
+  --muted: #161616;  
   --gradient-color-1: #b9beff;
   --gradient-color-2: #6ec3f4;
   --gradient-color-3: #eae2ff;
@@ -26,7 +27,7 @@
   --muted: #d6d9df;  /* gray-400 */
   --gradient-color-1: #8b91e0;
   --gradient-color-2: #62a0c4;
-  --gradient-color-3: #40598b;
+  --gradient-color-3: #3f5581;
   --nav-bg: rgba(0, 0, 0, 0.1);
   --border-color: rgba(128, 128, 128, 0.5);
   --theme-filter: invert(1);
@@ -44,7 +45,7 @@
 
 
 body {
-  background-color: var(--background);
+  background-color: black;
   transition: var(--transition-default);
 }
 
@@ -122,4 +123,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.ascii-sphere {
+  background: transparent;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+  line-height: 1;
+  white-space: pre;
 }

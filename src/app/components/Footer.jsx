@@ -64,7 +64,7 @@ export default function Footer({ className }) {
             target="_blank"
           >
             <img
-              src="tudelft.png"
+              src="/tudelft.png"
               alt="TuDelft Logo"
               className="w-6 h-auto opacity-80  invert-img ransition-transform duration-200 hover:scale-140"
               style={{ 

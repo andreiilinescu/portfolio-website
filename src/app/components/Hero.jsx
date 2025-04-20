@@ -18,7 +18,7 @@ export default function Hero(){
                     <ul className="text-muted text-sm sm:text-base md:text-lg space-y-2 sm:space-y-3">
                         <li className="flex items-start">
                             <span className="mr-2">🎓</span>
-                            <span>cs @ TU Delft (math minor -quant finance@ PoliMi - fall 2025)</span>
+                            <span>cs @ TU Delft (math minor - quant finance@ PoliMi - fall 2025)</span>
                         </li>
                         <li className="flex items-start">
                             <span className="mr-2">⚛️</span>
