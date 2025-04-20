@@ -17,7 +17,7 @@ export default function HeaderSecondary() {
                         <a href="/writing" className="nav-link">Writing</a>
                     </nav>
 
-                    <div className="flex items-center scale-125 transition-transform duration-200 hover:scale-160">
+                    <div className="flex items-center scale-125 transition-transform duration-200 hover:scale-160 pr-3">
                         <ThemeSwitcher />
                     </div>
                 </div>
