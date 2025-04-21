@@ -1,6 +1,5 @@
 import HeaderSecondary from '../components/HeaderSecondary';
 import Footer from '../components/Footer';
-import AsciiSphere from '../components/AsciiSphere';
 
 export default function Projects() {
     return (
