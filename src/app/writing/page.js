@@ -20,7 +20,7 @@ export default function Blog() {
                         </div>
                         <hr  className='mb-3 mt-3 sm:mt-5 md:mt-10 lg:mt-20 border-[var(--foreground)] opacity-10' />
                         <div className="flex justify-center items-center">
-                            <div className="w-3/4 ">
+                            <div className="w-5/8 ">
                                 <AsciiSphere />
                             </div>
                         </div>
