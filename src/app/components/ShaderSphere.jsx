@@ -36,9 +36,37 @@ export default function ShaderSphere() {
     const camera = new THREE.PerspectiveCamera(70, container.offsetWidth / container.offsetHeight, 0.1, 1000);
     camera.position.set(0, 0, 1);
     const controls = new OrbitControls(camera, document.body);
+    controls.enabled= true;
+    controls.enableDamping = true;  
+    controls.dampingFactor = 0.25;
     controls.enableZoom = false;
     controls.enablePan = false;
+    const handlePointerDown = (e) => {
+      const target = e.target;
+      const interactiveElement = target.closest('a, button, [role="button"], input, select, textarea');
+      
+      // Check if clicking on a link or button
+      if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('a') || target.closest('button')) {
+      controls.enabled = false;
+      interactiveElement.click();
+      
+      // Force enable controls after a short delay to ensure they're restored
+      setTimeout(() => {
+        controls.enabled = true;
+      }, 100);
+      
+      e.preventDefault();
+      } else {
+      controls.enabled = true;
+      }
+    };
 
+    const handlePointerUp = () => {
+      controls.enabled = true;
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('pointerup', handlePointerUp);
     // Sphere ShaderMaterial
     const material = new THREE.ShaderMaterial({
       vertexShader: vertex,
@@ -154,6 +182,8 @@ export default function ShaderSphere() {
       renderer.dispose();
       window.removeEventListener("resize", handleResize);
       observer.disconnect();
+      document.removeEventListener('pointerdown', handlePointerDown, true);
+    document.removeEventListener('pointerup', handlePointerUp, true);
     };
   }, []);
 
