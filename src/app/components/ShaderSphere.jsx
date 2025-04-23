@@ -35,7 +35,7 @@ export default function ShaderSphere() {
 
     const camera = new THREE.PerspectiveCamera(70, container.offsetWidth / container.offsetHeight, 0.1, 1000);
     camera.position.set(0, 0, 1);
-    const controls = new OrbitControls(camera, renderer.domElement);
+    const controls = new OrbitControls(camera, document.body);
     controls.enableZoom = false;
     controls.enablePan = false;
 
