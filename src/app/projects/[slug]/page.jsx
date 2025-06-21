@@ -6,7 +6,7 @@ import Footer from '@/app/components/Footer';
 
 export default async function PostPage({ params }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug,"writing");
+  const post = getPostBySlug(slug,"projects");
 
   if (!post) return notFound();
 

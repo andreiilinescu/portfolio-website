@@ -1,17 +1,16 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
-const postsDirectory = path.join(process.cwd(), 'src/app/writing/posts');
-
-export function getAllPosts() {
+export function getAllPosts(type = "writing") {
+  const postsDirectory = path.join(process.cwd(), `src/app/${type}/posts`);
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames
-    .filter((fileName) => fileName.endsWith('.mdx'))
+    .filter((fileName) => fileName.endsWith(".mdx"))
     .map((fileName) => {
-      const id = fileName.replace(/\.mdx$/, '');
+      const id = fileName.replace(/\.mdx$/, "");
       const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data } = matter(fileContents);
 
       return {
@@ -23,7 +22,8 @@ export function getAllPosts() {
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export function getPostBySlug(slug) {
+export function getPostBySlug(slug, type = "writing") {
+  const postsDirectory = path.join(process.cwd(), `src/app/${type}/posts`);
   const fullPath = path.join(postsDirectory, `${slug}.mdx`);
 
   // Check if file exists
@@ -32,7 +32,7 @@ export function getPostBySlug(slug) {
   }
 
   try {
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const fileContents = fs.readFileSync(fullPath, "utf8");
     const { content, data } = matter(fileContents);
     return { content, metadata: data };
   } catch (error) {
