@@ -1,5 +1,6 @@
 import HeaderSecondary from "../components/HeaderSecondary";
 import Footer from "../components/Footer";
+import PostCard from "../components/PostCard";
 import { getAllPosts } from "../lib/posts";
 const posts = getAllPosts("projects");
 export default function Projects() {
