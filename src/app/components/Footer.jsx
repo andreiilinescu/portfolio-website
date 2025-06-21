@@ -56,7 +56,7 @@ export default function Footer({ className }) {
           ))}
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <a href="https://mateidumitrescu.com" target="_blank" className="text-[var(--foreground)] ransition-transform duration-200 hover:scale-130 ">
+          <a href="https://mateidumitrescu.org" target="_blank" className="text-[var(--foreground)] ransition-transform duration-200 hover:scale-130 ">
             ←
           </a>
           <a
@@ -72,7 +72,7 @@ export default function Footer({ className }) {
             }}
             />
           </a>
-          <a href="https://mateidumitrescu.com" target="_blank" className="text-[var(--foreground)] ransition-transform duration-200 hover:scale-130">
+          <a href="https://mateidumitrescu.org" target="_blank" className="text-[var(--foreground)] ransition-transform duration-200 hover:scale-130">
             →
           </a>
         </div>
