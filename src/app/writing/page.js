@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import AsciiSphere from "../components/AsciiSphere";
 import PostCard from "../components/PostCard";
 import { getAllPosts } from "../lib/posts";
-const posts = getAllPosts("writing");
+const posts = getAllPosts();
 export default function Blog() {
   return (
     <div className="w-full h-full bg-[var(--background)]">
@@ -16,7 +16,7 @@ export default function Blog() {
             </h1>
             <div className="space-y-4">
               {posts.map((post) => (
-                <PostCard key={post.id} post={post} type="writing" />
+                <PostCard key={post.id} post={post} />
               ))}
             </div>
             <hr className="mb-3 mt-3 sm:mt-5 md:mt-10 lg:mt-20 border-[var(--foreground)] opacity-10" />

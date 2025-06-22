@@ -1,0 +1,13 @@
+{
+    "image":"galanet.png    ",
+    "title":"Galanet",
+    "description":"Lightweight C++ neural network library with OpenMP acceleration",
+    "url":"https://github.com/andreiilinescu/galanet",
+    "github":"https://github.com/andreiilinescu/galanet",
+    "deployment":"",
+    "tags":[
+        "C++",
+        "ANN",
+        "OpenMP"
+    ]
+}

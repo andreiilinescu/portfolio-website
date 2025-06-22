@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+const postsDirectory = path.join(process.cwd(), `src/app/writing/posts`);
 
-export function getAllPosts(type = "writing") {
-  const postsDirectory = path.join(process.cwd(), `src/app/${type}/posts`);
+export function getAllPosts() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames
     .filter((fileName) => fileName.endsWith(".mdx"))
@@ -22,8 +22,7 @@ export function getAllPosts(type = "writing") {
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export function getPostBySlug(slug, type = "writing") {
-  const postsDirectory = path.join(process.cwd(), `src/app/${type}/posts`);
+export function getPostBySlug(slug) {
   const fullPath = path.join(postsDirectory, `${slug}.mdx`);
 
   // Check if file exists
