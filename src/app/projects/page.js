@@ -15,15 +15,9 @@ export default function Projects() {
             </h1>
             <div className="space-y-4">
               {posts.map((post) => (
-                <PostCard key={post.id} post={post} />
+                <PostCard key={post.id} post={post} type="projects" />
               ))}
             </div>
-            {/* <hr  className='mb-3 mt-3 sm:mt-5 md:mt-10 lg:mt-20 border-[var(--foreground)] opacity-10' />
-                                <div className="flex justify-center items-center">
-                                    <div className="w-3/4 ">
-                                        <AsciiSphere />
-                                    </div>
-                                </div> */}
           </div>
           <div className="px-6 sm:px-8 lg:px-10 py-10">
             <hr className="mb-3 border-[var(--foreground)] opacity-10" />

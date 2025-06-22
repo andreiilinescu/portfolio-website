@@ -16,7 +16,7 @@ export default function Blog() {
             </h1>
             <div className="space-y-4">
               {posts.map((post) => (
-                <PostCard key={post.id} post={post} />
+                <PostCard key={post.id} post={post} type="writing" />
               ))}
             </div>
             <hr className="mb-3 mt-3 sm:mt-5 md:mt-10 lg:mt-20 border-[var(--foreground)] opacity-10" />

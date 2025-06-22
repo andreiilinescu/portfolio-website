@@ -3,7 +3,7 @@ import { compileMDX } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import HeaderSecondary from '@/app/components/HeaderSecondary';
 import Footer from '@/app/components/Footer';
-
+import PostContent from '@/app/components/PostContent';
 export default async function PostPage({ params }) {
   const { slug } = await params;
   const post = getPostBySlug(slug,"writing");
@@ -24,9 +24,7 @@ export default async function PostPage({ params }) {
                             <p className="text-sm text-[var(--muted)] mb-6">
                                 {new Date(post.metadata.date).toLocaleDateString()}    
                             </p>
-                        <div className=" prose prose-headings:text-[var(--foreground)] prose-strong:text-[var(--foreground)]  prose-em:text-[var(--foreground)] prose-headings:font-semibold prose-a:text-primary hover:prose-a:underline prose-img:rounded-md prose-pre:bg-muted prose-pre:text-[var(--foreground)] max-w-none text-[var(--foreground)]">
-                            {content}
-                        </div>
+                            <PostContent content={content} />
                         </div>
                         <div className='px-6 sm:px-8 lg:px-10 py-10'>
                             <hr  className='mb-3 border-[var(--foreground)] opacity-10' />

@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
-export default function PostCard({ post }) {
+export default function PostCard({ post,type }) {
 
   return (
     <Link 
-      href={`/writing/${post.slug}`}
+      href={`/${type}/${post.slug}`}
       className="block p-3 sm:p-4 rounded-lg transition-colors  hover:opacity-55 "
     >
       <article>

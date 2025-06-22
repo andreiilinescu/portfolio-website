@@ -1,0 +1,56 @@
+---
+title: 'GalaNet'
+date: '2025-04-23'
+excerpt: 'No Libraries | My try at building an ANN in C++'
+slug: 'galanet'
+---
+
+# Motivation
+
+I am in a point in my career, where I have 3 interests: ML/Quantum/Quant. I am in some way or another juggling all three at the moment. However out of the three I feel the greatest direct connection with ML.
+
+This project was kind of a result of my recent ML obsession/experimentation. This quarter I took Computational Intelligence, a course in which I went "deep" into deep learning.
+One notable thing we had to do was implement a Neural Network in python using only numpy. I felt that helped me understand how ANNs work a lot better, so I thought I should try to do it in C++ as well.
+
+## Why C++?
+Me and C++ go way back. It was the first programming language I learned over 10 years ago, while I was I was in the 5th grade of primary school. I then used it and practiced it for about 5 years while going on a lot of competitive programming competitions. At some point, however, I had to let it go, in favour of higher level languages, like JS and Python, as they were much more useful for hackathons and side projects.
+
+## OpenMP/Custom Linear Algebra Library
+During the Concepts of Programming languages course, we dove a bit into parallelization and concurrency. We played a bit with OpenMP, so I wanted to use that as well. And so the idea of designing a custom Linear Algebra Library operations came about.
+
+# Implementation
+
+## LinAlg
+I figured I would start with the fundamentals. So, I first wrote the LinAlg functions (`matrix.cpp`).
+
+I defined a Matrix class, which would hold this new custom datatype, around which everything is based. I implemented all the basic matrix operations like multiplication, addition, transpose, absolute, sign, and so on.
+
+This proved a bit more difficult than I expected, though. As unbeknownst to me, I had to not only implement A-B, but also A-=B and A-b (b=scalar). I had to do the = operator as well (basically a copy operator for matrices). And the A[x][y] element access opearator.
+
+Along the way of developing this project I continued interating over this "library" as more and more functions felt like they fit in.
+
+## NN architecture
+Then I figured I would implement the neural network high level architecture, basically a class in which you pass layers, which have a number of neurons/perceptrons and activation functions + a loss function at the last layer. 
+
+### Activation/Loss/Weight Init functions
+After that, I felt like the next logical step was to introduce the activation functions, for this I chose:
+- TanH
+- Relu
+- SoftMax (used for the last layer)
+
+For the Loss Functions, I chose:
+- MSE
+- MAE
+- Cross Entropy Loss (this is really useful in combination with SoftMax)
+
+Weight Init:
+- Zeros
+- Ones
+- Random Uniform
+- Xavier Uniform
+- He Uniform
+
+### BackPropagation
+Now, with all the functions (and their derivatives) defined and ready to use, I was ready to get into the meat of the project. BackProp the backbone of the Neural Network. 
+
+I could try to explain BackPropagation, but there are a lot of guides out there that manage to complete this feat. I particularly like [this one](https://medium.com/@sidharth.ss/the-backpropagation-2a19db0fe68f), from medium
