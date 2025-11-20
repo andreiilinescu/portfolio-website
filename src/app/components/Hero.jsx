@@ -10,9 +10,6 @@ export default function Hero(){
                 </h1>
                 
                 <div className="max-w-3xl space-y-4 sm:space-y-6">
-                    <h1 className="text-2xl sm:text-3xl font-bold font-serif text-[var(--foreground)] leading-tight">
-                        I'm Andrei Ilinescu
-                    </h1>
                     
                     {/* Adjusted spacing and text sizes for mobile */}
                     <ul className="text-muted text-sm sm:text-base md:text-lg space-y-2 sm:space-y-3">
